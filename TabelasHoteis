@@ -1,0 +1,89 @@
+-- Criação da TabelaCliente
+CREATE TABLE TabelaCliente (
+    idCliente INTEGER PRIMARY KEY,
+    nome TEXT,
+    email TEXT,
+    telefone TEXT,
+    cpf TEXT
+);
+
+-- Criação da TabelaHotel
+CREATE TABLE TabelaHotel (
+    idHotel INTEGER PRIMARY KEY,
+    nome TEXT,
+    cidade TEXT,
+    estado TEXT,
+    pais TEXT,
+    diaria REAL
+);
+
+-- Criação da TabelaOferta
+CREATE TABLE TabelaOferta (
+    idOferta INTEGER PRIMARY KEY,
+    descricao TEXT,
+    desconto REAL,
+    dataInicio TEXT,
+    dataFim TEXT
+);
+
+-- Criação da TabelaVoo
+CREATE TABLE TabelaVoo (
+    idVoo INTEGER PRIMARY KEY,
+    origem TEXT,
+    destino TEXT,
+    dataPartida TEXT,
+    dataRetorno TEXT,
+    preco REAL,
+    companhia TEXT
+);
+-- Inserindo Clientes
+INSERT INTO TabelaCliente (nome, email, telefone, cpf) VALUES 
+('João Silva', 'joao@email.com', '11999998888', '123.456.789-00'),
+('Maria Oliveira', 'maria@email.com', '21988887777', '234.567.890-11'),
+('Carlos Souza', 'carlos@email.com', '31977776666', '345.678.901-22'),
+('Ana Costa', 'ana@email.com', '41966665555', '456.789.012-33'),
+('Pedro Rocha', 'pedro@email.com', '51955554444', '567.890.123-44'),
+('Juliana Lima', 'ju@email.com', '61944443333', '678.901.234-55'),
+('Marcos Paulo', 'marcos@email.com', '71933332222', '789.012.345-66'),
+('Fernanda Dias', 'fer@email.com', '81922221111', '890.123.456-77'),
+('Roberto Alves', 'beto@email.com', '91911110000', '901.234.567-88'),
+('Camila Bento', 'camila@email.com', '11900001111', '012.345.678-99');
+
+-- Inserindo Hotéis
+INSERT INTO TabelaHotel (nome, cidade, estado, pais, diaria) VALUES 
+('Hotel Paraíso', 'Rio de Janeiro', 'RJ', 'Brasil', 350.00),
+('Grand Plaza', 'São Paulo', 'SP', 'Brasil', 500.00),
+('Beach Resort', 'Salvador', 'BA', 'Brasil', 450.00),
+('Mountain Inn', 'Gramado', 'RS', 'Brasil', 600.00),
+('City Center', 'Curitiba', 'PR', 'Brasil', 280.00),
+('Ocean View', 'Florianópolis', 'SC', 'Brasil', 420.00),
+('Solar Palace', 'Belo Horizonte', 'MG', 'Brasil', 310.00),
+('Amazon Lodge', 'Manaus', 'AM', 'Brasil', 550.00),
+('Pousada do Sol', 'Natal', 'RN', 'Brasil', 200.00),
+('Hotel Colonial', 'Ouro Preto', 'MG', 'Brasil', 250.00);
+
+-- Inserindo Ofertas
+INSERT INTO TabelaOferta (descricao, desconto, dataInicio, dataFim) VALUES 
+('Black Friday', 30.0, '2026-11-20', '2026-11-30'),
+('Verão 2026', 15.0, '2025-12-21', '2026-03-20'),
+('Carnaval', 10.0, '2026-02-10', '2026-02-20'),
+('Maio das Noivas', 20.0, '2026-05-01', '2026-05-31'),
+('Inverno Sul', 25.0, '2026-06-01', '2026-08-31'),
+('Semana Santa', 12.0, '2026-04-01', '2026-04-07'),
+('Aniversário Hotel', 40.0, '2026-09-15', '2026-09-20'),
+('Natal Antecipado', 20.0, '2026-12-01', '2026-12-15'),
+('Férias Julho', 15.0, '2026-07-01', '2026-07-31'),
+('Cliente Ouro', 50.0, '2026-01-01', '2026-12-31');
+
+-- Inserindo Voos
+INSERT INTO TabelaVoo (origem, destino, dataPartida, dataRetorno, preco, companhia) VALUES 
+('São Paulo', 'Recife', '2026-05-10', '2026-05-20', 1200.00, 'LATAM'),
+('Rio de Janeiro', 'Lisboa', '2026-06-15', '2026-07-01', 4500.00, 'TAP'),
+('Brasília', 'Miami', '2026-08-05', '2026-08-15', 3800.00, 'American Airlines'),
+('Curitiba', 'Buenos Aires', '2026-09-10', '2026-09-17', 1500.00, 'Gol'),
+('Belo Horizonte', 'Salvador', '2026-01-12', '2026-01-20', 850.00, 'Azul'),
+('Porto Alegre', 'São Paulo', '2026-03-05', '2026-03-08', 400.00, 'Gol'),
+('Manaus', 'Rio de Janeiro', '2026-04-20', '2026-04-30', 950.00, 'LATAM'),
+('Fortaleza', 'Madri', '2026-10-10', '2026-10-25', 4200.00, 'Iberia'),
+('Salvador', 'Paris', '2026-11-05', '2026-11-20', 5100.00, 'Air France'),
+('São Paulo', 'Tóquio', '2026-12-01', '2027-01-15', 8900.00, 'Emirates');
